@@ -1,0 +1,10 @@
+services:
+  server:
+    platform: linux/amd64 # Change to linux/arm/v7 for Raspberry Pi (or v8 etc)
+    build:
+      context: .
+    volumes:
+      - ./data/.ssh:/.ssh
+      - ./src/php:/app/php
+    ports:
+      - 2201:22 # Change to 22:22 if you don't have an SSH server running already

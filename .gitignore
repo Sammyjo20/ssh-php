@@ -1,0 +1,11 @@
+# Operating system files and directories
+.DS_Store
+._.DS_Store
+
+# Editors and IDEs
+/.fleet
+/.idea
+/.vscode
+
+# SSH Config
+data/.ssh
