@@ -1,6 +1,6 @@
 services:
   server:
-    platform: linux/amd64 # Change to linux/arm/v7 for Raspberry Pi (or v8 etc)
+    # platform: linux/amd64 # Change to linux/arm/v7 for Raspberry Pi (or v8 etc)
     build:
       context: .
     volumes:
