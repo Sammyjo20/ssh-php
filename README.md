@@ -16,6 +16,9 @@
 
 I know right?! I've just ran `ssh localhost` and I've got a full PHP application running in my terminal?! What! Me too. When I first saw [Joe Tannenbaum's](https://joe.codes/) Tweet where he showed off his awesome `ssh cli.lab.joe.codes` I thought to myself, I had to get this working myself. I have a secret project that I'm currently working on but during my research I managed to adapt his guide for getting [charmbracelet/wish](https://github.com/charmbracelet/wish) running with PHP to work with Docker!
 
+# Why?
+This is mainly for building [TUIs](https://en.wikipedia.org/wiki/Text-based_user_interface) however it can run any PHP script so you can build cool forms, resumes or anything you desire!
+
 # Why Docker?
 
 Well, messing around with SSH is not really something I want to do to my servers. Additionally, if I'm going to have the public **SSH INTO MY SERVER** I'm going to want to make sure it's ringfenced. With a Docker container, it's even more ringfenced then just SSHing directly into the server.
