@@ -150,8 +150,8 @@ ssh your-server-ip
 ## Support
 If you found this project useful, please consider sponsoring me either one time or a regular sponsor. This helps pay myself for my time maintaining and keeping projects like these active. You can sponsor me on GitHub by [clicking here](https://github.com/sponsors/sammyjo20).
 
-### Credits
+## Credits
 - Huge thanks to [Joe Tannenbaum's](https://joe.codes/) for his awesome [blog post](https://blog.joe.codes/creating-ssh-apps-with-charm-wish-and-laravel-prompts) and his support via Twitter/X DMs!
 
-### Security
+## Security
 If you find any security related issues, please send an email to 29132017+Sammyjo20@users.noreply.github.com
