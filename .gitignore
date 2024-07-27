@@ -7,9 +7,14 @@
 /.idea
 /.vscode
 
-# SSH Config
-data/.ssh
+# Project dependencies
+/vendor
+/composer.lock
 
-# Composer
-vendor
-composer.lock
+# Caches, externally stored stuff, etc
+.php-cs-fixer.cache
+.phpunit.result.cache
+tests/Fixtures/Saloon
+
+# environments/configs
+phpstan.neon

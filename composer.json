@@ -13,11 +13,27 @@
             "App\\": "./src/app"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "./tests"
+        }
+    },
     "authors": [
         {
             "name": "Your Name",
             "email": "youremail@example.com"
         }
     ],
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.60",
+        "phpstan/phpstan": "^1.11",
+        "pestphp/pest": "^2.34",
+        "symfony/var-dumper": "^7.1"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
 }
