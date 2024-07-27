@@ -146,7 +146,9 @@ Now you can SSH into your server `ssh your-server-ip` and you should see your aw
 ```
 ssh your-server-ip
 ```
-If you like my work and want to show some love, consider buying me some [coding fuel (Coffee)](https://github.com/sponsors/sammyjo20) to support the project's maintenance and development.
+
+## Support
+If you found this project useful, please consider sponsoring me either one time or a regular sponsor. This helps pay myself for my time maintaining and keeping projects like these active. You can sponsor me on GitHub by [clicking here](https://github.com/sponsors/sammyjo20).
 
 ### Credits
 - Huge thanks to [Joe Tannenbaum's](https://joe.codes/) for his awesome [blog post](https://blog.joe.codes/creating-ssh-apps-with-charm-wish-and-laravel-prompts) and his support via Twitter/X DMs!
