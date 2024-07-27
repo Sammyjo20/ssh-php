@@ -56,7 +56,7 @@ In the `src` directory, you will find an `index.php` file. This file is the entr
 You may also consider installing `nunomaduro/termwind` which is a fantastic tool that lets you write HTML in the terminal.
 
 Here are some useful resources for getting started:
-- [Joe Tannenbaum - Hacking Laravel Prompts For Fun & Profit](https://laravel.com/docs/11.x/prompts#main-content)
+- [Joe Tannenbaum - Hacking Laravel Prompts For Fun & Profit](https://blog.joe.codes/hacking-laravel-prompts-for-fun-and-profit)
 - [Joe Tannenbaum - Building TUIs Gotchas & Good Info](https://blog.joe.codes/building-tuis-gotchas-and-good-info)
 - [Laravel Prompts Documentation](https://laravel.com/docs/11.x/prompts#main-content)
 - [joetannenbaum/chewie Documentation](https://github.com/joetannenbaum/chewie)
