@@ -9,7 +9,6 @@
 
 # Project dependencies
 /vendor
-/composer.lock
 
 # Caches, externally stored stuff, etc
 .php-cs-fixer.cache

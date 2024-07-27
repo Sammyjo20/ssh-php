@@ -16,4 +16,4 @@ RUN ln -s /app/php/src/index.php /app/php/index.php
 
 # Run Composer install without dependencies
 
-RUN cd /app/php && composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
+RUN cd /app/php && composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader --ignore-platform-reqs
