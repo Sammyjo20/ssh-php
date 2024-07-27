@@ -41,6 +41,6 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd ./src && composer update --${{ matrix.stability }} --prefer-dist --no-interaction
+          composer update --${{ matrix.stability }} --prefer-dist --no-interaction
       - name: Execute tests
-        run: ./src/vendor/bin/pest
+        run: ./vendor/bin/pest
