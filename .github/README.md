@@ -107,7 +107,7 @@ Now you want to update your firewall rules to ensure that the port is not blocke
 ```
 sudo ufw allow 2201/tcp
 ```
-> **alert**
+> [!CAUTION]
 > Important: Before you log out of the server or close that terminal tab, open a new terminal and make sure you can access your server via SSH. If it doesn't work you will be locked out of your server, so remaining logged in in the original tab will allow you to remedy any issues.
 
 Next time you need to SSH into your server you can specify the custom port.
