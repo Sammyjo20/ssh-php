@@ -2,18 +2,24 @@ FROM sammyjo20/ssh-php:latest
 
 # Install Composer
 
+USER root
+
 RUN apt update && apt install composer -y
 
 # Copy all files
 
-COPY ./src /app/php/src
-COPY ./composer.json /app/php
-COPY ./composer.lock /app/php
+COPY ./src ./src
+COPY ./composer.json ./
+COPY ./composer.lock ./
 
 # Create a symbolic link
 
-RUN ln -s /app/php/src/index.php /app/php/index.php
+RUN ln -s ./src/index.php ./index.php
+
+# Switch back to a lower privaledged user
+
+USER server
 
 # Run Composer install without dependencies
 
-RUN cd /app/php && composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader --ignore-platform-reqs
+RUN composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader --ignore-platform-reqs
