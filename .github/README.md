@@ -80,8 +80,78 @@ This will run the SSH server in your terminal window. In another window you shou
 ssh localhost -p 2201
 ```
 
-# Deploying to production
+## Deploying to production
 
-### Credits
+### Requirements
+Your server must have Docker installed.
 
+### Configuring Everything
+Firstly, copy the `docker-compose.yml` file to `docker-compose.prod.yml` and open it up. Inside here, change the ports from `2201:22` to `22:22`. This will mean on production your app will run on the regular SSH port.
+You may also need to define the platform to build on.
+
+### Changing the default OpenSSH port on your server
+Next, we're going to need to change the OpenSSH port on your server to something other than `22`, because that's what our application will be running on. On your server run:
+
+```
+sudo nano /etc/ssh/sshd_config
+```
+
+Look for the line that starts with Port. It may be commented out, go ahead and uncomment it. Change it to whatever number you'd like (and is available), for example 2201. Then restart the service with the following command
+
+```
+sudo service ssh restart
+```
+
+Now you want to update your firewall rules to ensure that the port is not blocked. Depending on which firewall you are using, this may be different for you. For ufw:
+
+```
+sudo ufw allow 2201/tcp
+```
+> [!CAUTION]
+> Important: Before you log out of the server or close that terminal tab, open a new terminal and make sure you can access your server via SSH. If it doesn't work you will be locked out of your server, so remaining logged in in the original tab will allow you to remedy any issues.
+
+Next time you need to SSH into your server you can specify the custom port.
+
+```
+sssh user@your-server -p 2201
+```
+
+If you're using [Laravel Forge](https://forge.laravel.com) on this server, make sure you change the port that Forge connects to the server with under Settings > Server Settings > SSH Port.
+
+### Clone your project onto the server
+Make sure you commit your `docker-compose.prod.yml` file and then deploy the whole project to your server.
+
+### Deploy time!
+Now you can run the following command on your server. Run the following `./deploy.sh` script.
+
+If it is the first time running the above deploy script, you may need to make it executable.
+
+```
+chmod u+x ./deploy.sh
+```
+
+```
+./deploy.sh
+```
+> If you are using Laravel Forge, you can add this to your deployment script to automatically update the SSH app.
+
+It's completely normal for this command to exit after running. If you want to check that the Docker container is running, you can run the following command
+
+```
+docker ps
+```
+## And that's it! ✨
+Now you can SSH into your server `ssh your-server-ip` and you should see your awesome PHP application! You can even point your DNS to the server IP and use that too if you like.
+
+```
+ssh your-server-ip
+```
+
+## Support
+If you found this project useful, please consider sponsoring me either one time or a regular sponsor. This helps pay myself for my time maintaining and keeping projects like these active. You can sponsor me on GitHub by [clicking here](https://github.com/sponsors/sammyjo20).
+
+## Credits
 - Huge thanks to [Joe Tannenbaum's](https://joe.codes/) for his awesome [blog post](https://blog.joe.codes/creating-ssh-apps-with-charm-wish-and-laravel-prompts) and his support via Twitter/X DMs!
+
+## Security
+If you find any security related issues, please send an email to 29132017+Sammyjo20@users.noreply.github.com
