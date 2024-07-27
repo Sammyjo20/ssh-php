@@ -5,7 +5,6 @@
     "require": {
         "php": "^8.3",
         "laravel/prompts": "^0.1.24",
-        "nunomaduro/termwind": "^2.0",
         "joetannenbaum/chewie": "^0.1.2"
     },
     "autoload": {
@@ -45,6 +44,12 @@
         ],
         "test": [
             "./vendor/bin/pest"
+        ],
+        "run-dev": [
+            "docker-compose up --build"
+        ],
+        "deploy": [
+            "docker-compose up -d --build"
         ]
     }
 }
