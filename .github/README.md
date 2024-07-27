@@ -8,14 +8,11 @@
 
 </div>
 
-> This project is in early access, and I'm quite new to Docker so please consider contributing if you think this could be improved! Please share your thoughts in the issues/discussions. Thank you!
-
 ## What the shell?!
 
 I know right! I've just ran `ssh localhost` and I've got a full PHP application running in my terminal?! What! Me too. When I first saw [Joe Tannenbaum's](https://joe.codes/) Tweet where he showed off his awesome `ssh cli.lab.joe.codes` I thought to myself, I had to get this working myself. I have a secret project that I'm currently working on but during my research I managed to adapt his guide for getting [charmbracelet/wish](https://github.com/charmbracelet/wish) running with PHP to work with Docker!
 
-## Why?
-This is mainly for building [TUIs](https://en.wikipedia.org/wiki/Text-based_user_interface) however it can run any PHP script so you can build cool forms, resumes or anything you desire!
+This is project is mainly for building [TUIs](https://en.wikipedia.org/wiki/Text-based_user_interface) however it can run any PHP script so you can build cool forms, resumes or anything you desire!
 
 ## Why Docker?
 
@@ -25,7 +22,10 @@ Well, messing around with SSH is not really something I want to do to my servers
 - PHP 8.3 (Installed locally)
 - Docker
 
+> This project is in early access, and I'm quite new to Docker so please consider contributing if you think this could be improved! Please share your thoughts in the issues/discussions. Thank you!
+
 ## Installation
+
 To get started, run the following Composer `create-project` command. Make sure to rename the `ssh-app-name` to the name of your project.
 
 ```
