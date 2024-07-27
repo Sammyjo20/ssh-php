@@ -1,31 +1,19 @@
-FROM ubuntu:24.04
+FROM sammyjo20/ssh-php:latest
 
-# Install Go
+# Install Composer
 
-RUN apt update && apt install golang git php php-cli sudo -y
+RUN apt update && apt install composer -y
 
-RUN export PATH=$PATH:/usr/local/bin/go
+# Copy all files
 
-# Copy our very basic script
+COPY ./src /app/php/src
+COPY ./composer.json /app/php
+COPY ./composer.lock /app/php
 
-COPY ./src/go/main.go .
+# Create a symbolic link
 
-RUN go mod init sammyjo20/jourminal
+RUN ln -s /app/php/src/index.php /app/php/index.php
 
-# Install Dependencies
+# Run Composer install without dependencies
 
-RUN go get github.com/charmbracelet/log \
-    github.com/charmbracelet/ssh \
-    github.com/charmbracelet/wish \
-    github.com/charmbracelet/wish/logging \
-    github.com/creack/pty
-
-# Build the image
-
-RUN env go build main.go
-
-# Expose Port 22
-
-EXPOSE 22
-
-ENTRYPOINT ["./main"]
+RUN cd /app/php && composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader

@@ -1,0 +1,50 @@
+{
+    "name": "sammyjo20/ssh-php",
+    "description": "The ridiculously simple framework for building PHP SSH apps! 🔥",
+    "type": "project",
+    "require": {
+        "php": "^8.3",
+        "laravel/prompts": "^0.1.24",
+        "nunomaduro/termwind": "^2.0",
+        "joetannenbaum/chewie": "^0.1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "./src/app"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "./tests"
+        }
+    },
+    "authors": [
+        {
+            "name": "Your Name",
+            "email": "youremail@example.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.60",
+        "phpstan/phpstan": "^1.11",
+        "pestphp/pest": "^2.34",
+        "symfony/var-dumper": "^7.1"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "scripts": {
+        "fix-code": [
+            "./vendor/bin/php-cs-fixer fix --allow-risky=yes"
+        ],
+        "pstan": [
+            "./vendor/bin/phpstan analyse"
+        ],
+        "test": [
+            "./vendor/bin/pest"
+        ]
+    }
+}
