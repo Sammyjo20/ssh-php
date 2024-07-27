@@ -21,7 +21,12 @@ This is mainly for building [TUIs](https://en.wikipedia.org/wiki/Text-based_user
 
 Well, messing around with SSH is not really something I want to do to my servers. Additionally, if I'm going to have the public **SSH into my server** I'm going to want to make sure it's ring-fenced. With a Docker container, it's even more ring-fenced then just SSHing directly into the server.
 
-# Getting Started
+# Installation
+To get started, run the following Composer installation command
+
+```
+composer create-project sammyjo20/ssh-php ssh-app-name
+```
 
 # Deploying to production
 
