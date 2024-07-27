@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Renderers;
 
 use App\App;
@@ -12,11 +14,8 @@ class HomeRenderer extends Renderer
 
     /**
      * Invoke
-     *
-     * @param \App\App $app
-     * @return string
      */
-    public function __invoke(App $app): string
+    public function __invoke(App $app): static
     {
         $width = $app->terminal()->cols() - 8;
         $height = $app->terminal()->lines() - 5;

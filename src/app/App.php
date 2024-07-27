@@ -1,10 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App;
 
+use Laravel\Prompts\Prompt;
 use App\Renderers\HomeRenderer;
 use Chewie\Concerns\RegistersRenderers;
-use Laravel\Prompts\Prompt;
 
 class App extends Prompt
 {
