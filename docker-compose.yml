@@ -5,6 +5,11 @@ services:
       context: .
     volumes:
       - ./data/.ssh:/.ssh
-      - ./src/php:/app/php
     ports:
       - 2201:22 # Change to 22:22 if you don't have an SSH server running already
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+        max-file: "5"

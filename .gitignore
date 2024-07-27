@@ -9,3 +9,7 @@
 
 # SSH Config
 data/.ssh
+
+# Composer
+vendor
+composer.lock
