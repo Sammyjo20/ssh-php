@@ -6,6 +6,7 @@ namespace App\Renderers;
 
 use App\App;
 use Chewie\Concerns\Aligns;
+use function Laravel\Prompts\text;
 use Laravel\Prompts\Themes\Default\Renderer;
 
 class HomeRenderer extends Renderer
@@ -20,7 +21,19 @@ class HomeRenderer extends Renderer
         $width = $app->terminal()->cols() - 8;
         $height = $app->terminal()->lines() - 5;
 
-        $this->center('Welcome to SSH-PHP!', $width, $height)
+        $name = text('Tell me your name!');
+
+        $lines = [
+            '👋',
+            '',
+            'Welcome to SSH-PHP, ' . $name . '!',
+            '',
+            '❤️',
+            '',
+            'Support the project https://github.com/sponsors/Sammyjo20',
+        ];
+
+        $this->center($lines, $width, $height)
             ->each($this->line(...));
 
         return $this;
