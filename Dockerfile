@@ -1,10 +1,8 @@
 FROM sammyjo20/ssh-php:latest
 
-# Install Composer
+# Switch to root
 
 USER root
-
-RUN apk update && apk add composer
 
 # Copy all files
 
@@ -15,6 +13,10 @@ COPY ./composer.lock ./
 # Create a symbolic link
 
 RUN ln -s ./src/index.php ./index.php
+
+# Create the .ssh folder
+
+RUN mkdir .ssh
 
 # Update the server's ownership
 

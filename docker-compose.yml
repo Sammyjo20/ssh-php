@@ -4,7 +4,7 @@ services:
     build:
       context: .
     volumes:
-      - ./.docker/.ssh:/home/server/.ssh
+      - ssh-php-ssh:/home/server/.ssh
     ports:
       - 2201:22 # Change to 22:22 if you don't have an SSH server running already
     restart: unless-stopped
@@ -13,3 +13,5 @@ services:
       options:
         max-size: "50m"
         max-file: "5"
+volumes:
+  ssh-php-ssh:
