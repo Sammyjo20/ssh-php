@@ -4,7 +4,7 @@
 
 ### The ridiculously simple framework for building PHP SSH apps! 🔥
 
-<img width="678" alt="Screenshot 2024-07-28 at 22 52 57" src="https://github.com/user-attachments/assets/4569ecc6-2749-46b6-9cf7-7e2b17523c15">
+<img width="974" alt="Screenshot 2024-07-26 at 18 09 49" src="https://github.com/user-attachments/assets/be2d197d-b574-418d-9a6d-76d3b3d4b667">
 
 </div>
 
