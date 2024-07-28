@@ -8,7 +8,6 @@ USER root
 
 COPY ./src ./src
 COPY ./composer.json ./
-COPY ./composer.lock ./
 
 # Create a symbolic link
 
