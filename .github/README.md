@@ -18,7 +18,7 @@ This is project is mainly for building [TUIs](https://en.wikipedia.org/wiki/Text
 
 Well, messing around with SSH is not really something I want to do to my servers. Additionally, if I'm going to have the public **SSH into my server** I'm going to want to make sure it's ring-fenced. With a Docker container, it's even more ring-fenced then just SSHing directly into the server.
 
-# Live Demo
+## Live Demo
 Want to see how it looks yourself? I've deployed this repository to a Hetzner Cloud server which is just running Docker.
 
 ```
