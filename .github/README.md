@@ -2,7 +2,7 @@
 
 # 🤫  _`SSH PHP` !_
 
-### The ridiculously simple framework for building PHP SSH apps! 🔥
+### The ridiculously simple starting point for building PHP SSH apps! 🔥
 
 <img width="974" alt="Screenshot 2024-07-26 at 18 09 49" src="https://github.com/user-attachments/assets/be2d197d-b574-418d-9a6d-76d3b3d4b667">
 
@@ -10,13 +10,13 @@
 
 ## What the shell?!
 
-I know right! I've just ran `ssh localhost` and I've got a full PHP application running in my terminal?! What! Me too. When I first saw [Joe Tannenbaum's](https://joe.codes/) Tweet where he showed off his awesome `ssh cli.lab.joe.codes` I thought to myself, I had to get this working myself. I have a secret project that I'm currently working on but during my research I managed to adapt his guide for getting [charmbracelet/wish](https://github.com/charmbracelet/wish) running with PHP to work with Docker!
+I know right? I've just run `ssh localhost` and I've got a full PHP application running in my terminal?! What! Me too. When I first saw [Joe Tannenbaum's](https://joe.codes/) Tweet where he showed off his awesome `ssh cli.lab.joe.codes` I thought to myself, I had to get this working myself. I have a secret project that I'm currently working on but during my research, I managed to adapt his guide for getting [charmbracelet/wish](https://github.com/charmbracelet/wish) running with PHP to work with Docker!
 
 This is project is mainly for building [TUIs](https://en.wikipedia.org/wiki/Text-based_user_interface) however it can run any PHP script so you can build cool forms, resumes or anything you desire!
 
 ## Why Docker?
 
-Well, messing around with SSH is not really something I want to do to my servers. Additionally, if I'm going to have the public **SSH into my server** I'm going to want to make sure it's ring-fenced. With a Docker container, it's even more ring-fenced then just SSHing directly into the server.
+Well, messing around with SSH is not something I want to do to my servers. Additionally, if I'm going to have the public **SSH into my server** I want to make sure it's ring-fenced. With a Docker container, it's even more ring-fenced then just SSHing directly into the server.
 
 ## Live Demo
 Want to see how it looks yourself? I've deployed this repository to a Hetzner Cloud server which is just running Docker.
@@ -76,12 +76,12 @@ php ./src/index.php
 ```
 
 ### Running the SSH server
-Obviously you're going to want to see the SSH server right before your eyes! You can do this by running the following command.
+Obviously, you're going to want to see the SSH server right before your eyes! You can do this by running the following command.
 
 ```
 composer run-dev
 ```
-This will run the SSH server in your terminal window. In another window you should be able to run the following command
+This will run the SSH server in your terminal window. In another window, you should be able to run the following command
 
 ```
 ssh localhost -p 2201
@@ -120,7 +120,7 @@ sudo ufw allow 2201/tcp
 Next time you need to SSH into your server you can specify the custom port.
 
 ```
-sssh user@your-server -p 2201
+ssh user@your-server -p 2201
 ```
 
 If you're using [Laravel Forge](https://forge.laravel.com) on this server, make sure you change the port that Forge connects to the server with under Settings > Server Settings > SSH Port.
@@ -155,7 +155,7 @@ ssh your-server-ip
 ```
 
 ## Support
-If you found this project useful, please consider sponsoring me either one time or a regular sponsor. This helps pay myself for my time maintaining and keeping projects like these active. You can sponsor me on GitHub by [clicking here](https://github.com/sponsors/sammyjo20).
+If you found this project useful, please consider sponsoring me either one time or a regular sponsor. This helps pay me for my time maintaining and keeping projects like these active. You can sponsor me on GitHub by [clicking here](https://github.com/sponsors/sammyjo20).
 
 ## Credits
 - Huge thanks to [Joe Tannenbaum's](https://joe.codes/) for his awesome [blog post](https://blog.joe.codes/creating-ssh-apps-with-charm-wish-and-laravel-prompts) and his support via Twitter/X DMs!
