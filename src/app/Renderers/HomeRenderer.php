@@ -28,9 +28,12 @@ class HomeRenderer extends Renderer
             '',
             'Welcome to SSH-PHP, ' . $name . '!',
             '',
+            '🔗  https://github.com/sammyjo20/ssh-php',
+            '',
+            '',
             '❤️',
             '',
-            'Support the project https://github.com/sponsors/Sammyjo20',
+            'Support the project https://github.com/sponsors/sammyjo20',
         ];
 
         $this->center($lines, $width, $height)
