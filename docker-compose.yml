@@ -1,13 +1,13 @@
 services:
   server:
-    # platform: linux/amd64 # Change to linux/arm/v7 for Raspberry Pi (or v8 etc)
     build:
       context: .
     volumes:
       - ssh-php-ssh:/home/server/.ssh
+      - ssh-php-storage:/home/server/src/storage
     ports:
       - 2201:22 # Change to 22:22 if you don't have an SSH server running already
-    restart: unless-stopped
+    restart: always
     logging:
       driver: "json-file"
       options:
@@ -15,3 +15,4 @@ services:
         max-file: "5"
 volumes:
   ssh-php-ssh:
+  ssh-php-storage:

@@ -87,6 +87,15 @@ This will run the SSH server in your terminal window. In another window, you sho
 ssh localhost -p 2201
 ```
 
+### Installing additional PHP extensions
+You may need to add additional extensions to get your server to work in production. You can do
+this by modifying the `Dockerfile` in the root directory. The base image runs Alpine Linux and
+has a few common PHP extensions, however you can add more here if you need.
+
+```
+RUN apk add php-redis
+```
+
 ## Deploying to production
 
 ### Requirements
