@@ -4,7 +4,6 @@ services:
       context: .
     volumes:
       - ssh-php-ssh:/home/server/.ssh
-      - ssh-php-storage:/home/server/src/storage
     ports:
       - 2201:22 # Change to 22:22 if you don't have an SSH server running already
     restart: always
@@ -15,4 +14,3 @@ services:
         max-file: "5"
 volumes:
   ssh-php-ssh:
-  ssh-php-storage:
