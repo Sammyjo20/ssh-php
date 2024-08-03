@@ -46,12 +46,11 @@ You will have the following directory structure. Here is an explanation of all t
 
 ```
 .
-├── .docker            # Where the SSH keys for your Docker container are stored.
 ├── .github            # Contains workflows for running tests, PHP Stan and Code Style Fixers.
 ├── src                # Your application's source files
 ├── tests              # Automated tests (PEST)
 ├── docker-compose.yml # This file will be used to deploy your application to production.
-└── Dockerfile         # This file allows you to customise the production image.
+└── Dockerfile         # This file allows you to customise the production image and add extra PHP extensions.
 ```
 You may choose to keep the tests and the `.github` folder. If you don't use/need code style or PHP stan these can be uninstalled by removing them from `composer.json` and running `composer update`.
 
