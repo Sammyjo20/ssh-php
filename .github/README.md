@@ -163,6 +163,11 @@ Now you can SSH into your server `ssh your-server-ip` and you should see your aw
 ssh your-server-ip
 ```
 
+## Official Docker Repository
+This project uses the `sammyjo20/ssh-php` Dockerfile. You can see this Dockerfile and contribute by following the link below.
+
+https://github.com/sammyjo20/ssh-php-docker
+
 ## Support
 If you found this project useful, please consider sponsoring me either one time or a regular sponsor. This helps pay me for my time maintaining and keeping projects like these active. You can sponsor me on GitHub by [clicking here](https://github.com/sponsors/sammyjo20).
 
