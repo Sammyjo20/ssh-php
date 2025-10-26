@@ -1,3 +1,6 @@
+> [!WARNING]  
+> As of **26th October 2025** this project has been officially abandoned. Thank you everyone for your support and stars. If people are still interested in building SSH experiences with PHP, I highly recommend using https://github.com/whispphp/whisp.
+
 <div align="center">
 
 # 🤫  _`SSH PHP` !_
